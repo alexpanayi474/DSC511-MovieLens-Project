@@ -18,10 +18,4 @@ This is the final processed dataset ready for regression modeling, exported from
 | avg_rating | Simple average of all post-release ratings for the movie |
 | num_ratings | Total number of post-release ratings |
 
-## Notes
 
-- Contains 50,307 movies (post-1995 subset with at least one rating after release)
-- 1,013 movies with zero post-release ratings were removed
-- cast_frequency and director_frequency are time-aware to prevent data leakage
-- Runtime nulls were imputed with the median runtime of movies released before each film
-- The Bayesian-smoothed target (weighted_avg_rating) is not in this file; it is computed at the start of the modeling section using avg_rating and num_ratings
