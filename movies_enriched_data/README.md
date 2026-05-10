@@ -3,7 +3,7 @@
 Enriched version of the MovieLens ml-latest dataset (86,537 movies) with metadata from the TMDB API.
 
 ## Files
-- `movies_enriched_selected.csv` — All movies from movies.csv merged with TMDB metadata
+- `movies_enriched_selected.csv` - All movies from movies.csv merged with TMDB metadata
 
 ## Enriched Columns
 | Column | Description |
