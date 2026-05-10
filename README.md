@@ -35,6 +35,12 @@ Three models were trained using a chronological split (pre-2019 train, 2019-2020
 
 The recommendation system uses ALS on a random 60/20/20 split (20.3M / 6.8M / 6.8M ratings), with a baseline model followed by hyperparameter tuning via 5-fold cross-validation.
 
+## EDA Findings
+
+4.0 is the most common rating, and whole-star ratings are more frequent than half-star ones. Movie catalog growth peaked around 2015-2018, and platform activity tracked industry milestones (likely from DVD boom, Netflix era, rise of streaming). User activity is heavily skewed toward a small group of power users who tend to rate lower than average and favor Drama, Comedy, and Thriller.
+
+Film-Noir is the highest-rated genre historically, Horror is the lowest and declining. Older decades score higher due to survivorship bias, except for 1980s films which have seen a nostalgia-driven recovery.
+
 
 ## Results
 
@@ -64,15 +70,6 @@ Random Forest performed best, so we tuned it (grid search over numTrees and maxD
 The tuned model was selected through 5-fold CV over 12 hyperparameter combinations. Cold start affected less than 0.15% of validation/test ratings.
 
 **Final test set performance (tuned ALS): RMSE = 0.8116, MAE = 0.6239**
-
-Top-10 recommendations were genre-consistent with each user's rating history.
-
-
-## Key Findings
-
-4.0 is the most common rating, and whole-star ratings are more frequent than half-star ones. Movie catalog growth peaked around 2015-2018, and platform activity tracked industry milestones (DVD boom, Netflix era, rise of streaming). User activity is heavily skewed toward a small group of power users who tend to rate lower than average and favor Drama, Comedy, and Thriller.
-
-Film-Noir is the highest-rated genre historically; Horror is the lowest and declining. Older decades score higher due to survivorship bias, except for 1980s films which have seen a nostalgia-driven recovery.
 
 
 ## TMDB Enrichment
