@@ -15,7 +15,7 @@ This project uses Apache Spark to analyze the MovieLens ml-latest dataset (33.8M
 - `DSC_511_MovieLens.ipynb` - Data ingestion, EDA, feature engineering, and ML regression models
 - `TMDB_Enrichment_for_MovieLens.ipynb` - Fetches metadata from the TMDB API, produces `movies_enriched_selected.csv`
 - `ALS_Recomendation.ipynb` - Collaborative filtering recommendation system using ALS
-- `movies_enriched_selected.csv` - The enriched movie dataset used as input for the main notebook
+- `movies_enriched_data/movies_enriched_selected.csv` - The enriched movie dataset used as input for the main notebook
 - `movies_with_features/movies_with_features.csv` - Final version of the data right before the regression step, with all features already computed. Useful if you want to skip the EDA/engineering/preprocessing and jump straight to model training
 
 
@@ -84,7 +84,7 @@ We noticed inconsistencies between the release years in MovieLens movie titles a
 
 ## Note on AI Tool Usage
 
-The TMDB enrichment notebook was developed with AI assistance (Claude by Anthropic) for the parts involving concurrent API calls and checkpoint-based recovery, as these are not covered in the DSC 511 curriculum. All generated code was reviewed, tested, and verified by the team against the TMDB website before inclusion. The analysis design, data joining logic, and Spark integration were done entirely by us.
+The TMDB enrichment notebook was developed with AI assistance (Claude by Anthropic) for the parts involving concurrent API calls and checkpoint-based recovery, as these are not covered in the DSC 511 curriculum. All generated code was reviewed, tested, and verified by the team against the TMDB website before inclusion.
 
 
 ## Running the Project
